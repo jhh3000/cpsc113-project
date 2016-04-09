@@ -22,6 +22,6 @@ def poll(request):
 	return render(request, template, context)
 
 def portal(request):
-	template = "dashboard.html"
+	template = "portal.html"
 	context = {}
     return render(request, template, context)
