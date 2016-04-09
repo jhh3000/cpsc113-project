@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^poll/$'),
     url(r'^dashboard/$'),
+    url(r'^', include('polling.urls')),
 ]
