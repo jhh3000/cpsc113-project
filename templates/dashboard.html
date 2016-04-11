@@ -43,20 +43,30 @@
 
       var myLineChart = new Chart(ctx).Line(data);
 
+      var window_focus = true;
+
+      $(window).focus(function() {
+          window_focus = true;
+      }).blur(function() {
+          window_focus = false;
+      });
+
       i = data.labels.length;
       setInterval(function() {
-        i++
-        $.ajax({
-            url: "/dashboard_data",
-            type: "GET",
+        if (window_focus) {
+          i++
+          $.ajax({
+              url: "/dashboard_data",
+              type: "GET",
 
-            success: function(json) {
-              if (myLineChart.datasets[0].points.length >= 10) {
-                myLineChart.removeData();
-              }
-              myLineChart.addData([json.data[0], json.data[1]], i);
-            },
-        });
+              success: function(json) {
+                if (myLineChart.datasets[0].points.length >= 10) {
+                  myLineChart.removeData();
+                }
+                myLineChart.addData([json.data[0], json.data[1]], i);
+              },
+          });
+        }
       }, 1500);
 
     });
