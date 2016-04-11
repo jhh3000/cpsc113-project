@@ -1,5 +1,9 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from polling.views import (
+	dashboard,
+	poll,
+)
 
 urlpatterns = [
     # Examples:
@@ -7,7 +11,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'polling.views.dashboard'),
-    url(r'^poll/$', 'polling.views.poll'),
-    url(r'^dashboard/$', 'polling.views.dashboard'),
+    url(r'^$', dashboard),
+    url(r'^poll/$', poll),
+    url(r'^dashboard/$', dashboard),
 ]
