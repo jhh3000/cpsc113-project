@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LECTERN PORTAL</title>
+    <style type="text/css">
+        body {
+            background-color:white;
+        }
+        #wrap {
+            width:500px;
+            margin:auto;
+            background-color:white;
+        }
+        .left {
+            width:240px;
+            float:left;
+            background-color:#F0FFED;
+        }
+        .right {
+            width:240px;
+            float:right;
+            background-color:#F0FFED;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="left">
+            <h3>Student Login</h3>
+            <form class="studentLogin" action="/studentlogin" method="POST">
+                {% csrf_token %}
+                <input name="email" type="text" placeholder="Email"><br>
+                <input name="sessionCode" type="text" placeholder="Session Code"><br>
+                <button type="submit" class="studentLoginSubmit">Login</button>
+            </form>
+        </div>
+        <div class="right">
+            <h3>Teacher Login</h3>
+            <form class="teacherLogin" action="/teacherogin" method="POST">
+                {% csrf_token %}
+                <input name="email" type="email" placeholder="email"><br><br>
+                <button class="createNewSession" type="submit">Create New Session</button>
+            </form>
+        </div>
+    </div>
+</body>
+<footer>
+    
+</footer>
+</body>
+</html>
