@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from polling.views import (
 	dashboard,
+	dashboard_data,
 	poll,
 )
 
@@ -14,4 +15,5 @@ urlpatterns = [
     url(r'^$', dashboard),
     url(r'^poll/$', poll),
     url(r'^dashboard/$', dashboard),
+    url(r'^dashboard_data/$', dashboard_data),
 ]
