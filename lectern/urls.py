@@ -1,7 +1,8 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from polling.views import (
-	dashboard,
+	portal,
+    dashboard,
 	dashboard_data,
 	poll,
 )
@@ -12,7 +13,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', dashboard),
+    url(r'^$', portal),
     url(r'^poll/$', poll),
     url(r'^dashboard/$', dashboard),
     url(r'^dashboard_data/$', dashboard_data),
