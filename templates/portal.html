@@ -39,7 +39,7 @@
             <h3>Teacher Login</h3>
             <form class="teacherLogin" action="{% url 'teacherlogin' %}" method="POST">
                 {% csrf_token %}
-                <input name="email" type="email" placeholder="email"><br><br>
+                <input name="code" type="text" placeholder="login code"><br><br>
                 <button class="createNewSession" type="submit">Create New Session</button>
             </form>
         </div>
