@@ -14,7 +14,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', portal),
-    url(r'^poll/$', poll),
+    url(r'^poll/$', views.poll, name='poll'),
     url(r'^dashboard/$', dashboard),
     url(r'^dashboard_data/$', dashboard_data),
     url(r'^studentlogin/$', studentlogin),
