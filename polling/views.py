@@ -26,3 +26,12 @@ def portal(request):
 	context = {}
 	return render(request, template, context)
 
+def studentlogin(request):
+	template = "portal.html"
+	context = {}
+	return render(request, template, context)
+
+def teacherlogin(request):
+	template = "portal.html"
+	context = {}
+	return render(request, template, context)

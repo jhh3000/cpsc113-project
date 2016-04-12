@@ -5,6 +5,8 @@ from polling.views import (
     dashboard,
 	dashboard_data,
 	poll,
+    studentlogin,
+    teacherlogin,
 )
 
 urlpatterns = [
@@ -17,7 +19,7 @@ urlpatterns = [
     url(r'^poll/$', poll, name='poll'),
     url(r'^dashboard/$', dashboard),
     url(r'^dashboard_data/$', dashboard_data),
-    # url(r'^studentlogin/$', studentlogin),
-    # url(r'^teacherlogin/$', teacherlogin),
+    url(r'^studentlogin/$', studentlogin, name='studentlogin'),
+    url(r'^teacherlogin/$', teacherlogin, name='teacherlogin'),
 
 ]
