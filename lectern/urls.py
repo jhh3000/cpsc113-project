@@ -17,4 +17,7 @@ urlpatterns = [
     url(r'^poll/$', poll),
     url(r'^dashboard/$', dashboard),
     url(r'^dashboard_data/$', dashboard_data),
+    url(r'^studentlogin/$', studentlogin),
+    url(r'^teacherlogin/$', teacherlogin),
+
 ]
