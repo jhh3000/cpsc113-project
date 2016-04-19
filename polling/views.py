@@ -1,6 +1,6 @@
 import random
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 
 # Create your views here.
@@ -26,3 +26,14 @@ def portal(request):
 	context = {}
 	return render(request, template, context)
 
+def studentlogin(request):
+	template = "portal.html"
+	context = {}
+	return render(request, template, context)
+
+def teacherlogin(request):
+	code = request.POST.get('code')
+	if code == "teacher":
+		return redirect('dashboard')
+	else:
+		return redirect('home')
