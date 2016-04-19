@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
-class Presses(models.Model):
+class Poll(models.Model):
 	time_stamp = models.TimeField()
-	color = models.BooleanField()
+	understand = models.BooleanField()
+	user = models.ForeignKey(User)

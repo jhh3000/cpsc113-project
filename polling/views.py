@@ -1,9 +1,12 @@
 import random
+from datetime import datetime
 
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+
+from .models import Poll
 
 DEFAULT_PASSWORD = 'DEFAULT_PASSWORD'
 
@@ -17,7 +20,7 @@ def dashboard(request):
 def dashboard_data(request):
 	num1 = random.random() * 25 + 25
 	num2 = random.random() * 25 + 25
-	response = JsonResponse({ 'data': [num1, num2]})
+	response = JsonResponse({ 'data': [num1, num2] })
 	return response
 
 def poll(request):
@@ -26,6 +29,14 @@ def poll(request):
 	return render(request, template, context)
 
 def portal(request):
+	# just for debugging
+	if request.user.is_authenticated():
+		Poll.objects.create(
+			time_stamp=datetime.now(),
+			understand=True,
+			user=request.user,
+		)
+
 	template = "portal.html"
 	context = {}
 	return render(request, template, context)
