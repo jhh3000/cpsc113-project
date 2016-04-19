@@ -4,7 +4,7 @@ from polling.views import (
 	portal,
     dashboard,
 	dashboard_data,
-	poll,
+    poll,
     studentlogin,
     teacherlogin,
 )
