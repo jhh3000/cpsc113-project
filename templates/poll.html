@@ -3,7 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <title>Lectern - Student</title>
+  <style type="text/css">
+    .buttoncontainer {
+      width:500px;
+      margin:auto;
+    }
+    
+    .greencol {
+      width:240px;
+      background-color: green;
+      height: 240px;
+      color:white;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 1em;
+      }
+      
+      .greencol p {
+        margin: 45% 0;
+        
+      }
+      
+      .redcol p {
+        margin: 45% 0;
 
+      }
+    
+    .redcol {
+      width:240px;
+      color: white;
+      height: 240px;
+      text-align: center;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 1em;
+    }
+    
+    .top-buffer { margin-top:100px; }
+    
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -46,12 +86,15 @@
     </nav>
     
     <!--- ------------------------------ buttons --------------->
-    
-    <div class="container">
-    <div class="row">
-        <div class="col-md-8">.col-md-8</div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
+    <div class="row top-buffer">
+    </div>
+    <div class="buttoncontainer">
+          <div class="greencol">
+            <p> I Get It </p>
+          </div>
+          <div class="redcol">
+            <p> I Don't Get It </p>
+          </div>
     </div>
     
     
