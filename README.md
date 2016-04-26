@@ -1,43 +1,24 @@
-# Heroku Django Starter Template
+# Lectern
 
-An utterly fantastic project starter template for Django 1.9.
+One-way data collection software for classrooms.
 
 ## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise
+Student and Teacher interfaces.
+Students tap red or green buttons throughout class period to send live data about their comprehension to their professor.
+Professor sees a live-updating plot of button presses over time, as well as a current snapshot of presses in the last 3 minutes.
 
-## How to Use
+## Links
 
-To use this project, follow these steps:
+Portal for students and professors
+http://yale-lectern.herokuapp.com/
 
-1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+Student polling view
+http://yale-lectern.herokuapp.com/poll/
 
-## Creating Your Project
+Professor dashboard view
+http://yale-lectern.herokuapp.com/dashboard/
 
-Using this template to create a new Django app is easy::
+## Framework
 
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-You can replace ``helloworld`` with your desired project name.
-
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+Coded with Django. Views made with Bootstrap. Hosted on Heroku.
